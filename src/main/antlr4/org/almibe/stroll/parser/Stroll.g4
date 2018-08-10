@@ -1,8 +1,8 @@
 parser grammar Stroll;
 
-expression
-  : (VARIABLE EQUAL_SIGN)? command
-;
+//expression
+//  : (VARIABLE EQUAL_SIGN)? command
+//;
 
 command
   : newCommand | updateCommand | setCommand | deleteCommand | findCommand | simpleCommand
