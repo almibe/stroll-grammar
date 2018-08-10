@@ -1,5 +1,7 @@
 parser grammar Stroll;
 
+options { tokenVocab = ModalStrollLexer; }
+
 //expression
 //  : (VARIABLE EQUAL_SIGN)? command
 //;
