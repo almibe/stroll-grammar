@@ -16,6 +16,14 @@ ENTITY_NAME
   : 
 ;
 
+START_BRACKET
+  : '['
+;
+
+END_BRACKET
+  : ']'
+;
+
 START_BRACE
   : '{'
 ;
@@ -29,11 +37,11 @@ INT
 ;
 
 LONG
-  : [0..9]+ 'L'
+  : INT 'L'
 ;
 
 DOUBLE
-  : [0..9]+ '.' [0..9]+
+  : INT '.' INT
 ;
 
 BOOLEAN
