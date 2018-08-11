@@ -11,15 +11,15 @@ command
 ;
 
 newCommand
-  : NEW_KEYWORD NAME START_BRACE propertyOrLinkAssignment* END_BRACE
+  : NEW_KEYWORD NAME START_BRACE propertyOrLinkAssignments END_BRACE
 ;
 
 updateCommand
-  : UPDATE_KEYWORD IDENTITY START_BRACE propertyOrLinkAssignment* END_BRACE
+  : UPDATE_KEYWORD IDENTITY START_BRACE propertyOrLinkAssignments END_BRACE
 ;
 
 setCommand
-  : SET_KEYWORD IDENTITY START_BRACE propertyOrLinkAssignment* END_BRACE
+  : SET_KEYWORD IDENTITY START_BRACE propertyOrLinkAssignments END_BRACE
 ;
 
 deleteCommand
@@ -28,6 +28,10 @@ deleteCommand
 
 findCommand
   : FIND_KEYWORD NAME START_BRACE findParameter* END_BRACE
+;
+
+propertyOrLinkAssignments
+  : propertyOrLinkAssignment (',' propertyOrLinkAssignment)*
 ;
 
 propertyOrLinkAssignment
