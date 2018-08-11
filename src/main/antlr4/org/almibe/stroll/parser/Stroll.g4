@@ -50,6 +50,10 @@ linkAssignment
   : NAME (ARROW | FAT_ARROW) IDENTITY
 ;
 
+linksListAssigment
+  : NAME FAT_ARROW START_BRACKET IDENTITY (',' IDENTITY)* END_BRACKET
+;
+
 findParameter
   : propertyAssignment | linkAssignment | propertyExists | linkExists | propertyStartsWith | propertyRange
 ;
