@@ -12,12 +12,16 @@ NEW_KEYWORD
   : 'new'
 ;
 
-STRING
-  : '"' ('a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ')+ '"'
+INT
+  : ('0' .. '9')+
 ;
 
-NAME
-  : ('a' .. 'z' | 'A' .. 'Z' | '0' .. '9')+
+LONG
+  : INT 'L'
+;
+
+DOUBLE
+  : INT '.' INT
 ;
 
 START_BRACKET
@@ -34,18 +38,6 @@ START_BRACE
 
 END_BRACE
   : '}'
-;
-
-INT
-  : ('0' .. '9')+
-;
-
-LONG
-  : INT 'L'
-;
-
-DOUBLE
-  : INT '.' INT
 ;
 
 BOOLEAN
@@ -98,6 +90,14 @@ STARTS_WITH
 
 TO
   : 'to'
+;
+
+STRING
+  : '"' ('a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ')+ '"'
+;
+
+NAME
+  : ('a' .. 'z' | 'A' .. 'Z' | '0' .. '9')+
 ;
 
 WS
