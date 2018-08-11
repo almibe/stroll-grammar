@@ -35,7 +35,7 @@ propertyOrLinkAssignments
 ;
 
 propertyOrLinkAssignment
-  : propertyAssignment | linkAssignment
+  : propertyAssignment | linkAssignment | linksListAssigment
 ;
 
 propertyAssignment
@@ -55,7 +55,7 @@ linksListAssigment
 ;
 
 findParameter
-  : propertyAssignment | linkAssignment | propertyExists | linkExists | propertyStartsWith | propertyRange
+  : propertyAssignment | linkAssignment | linksListAssigment | propertyExists | linkExists | propertyStartsWith | propertyRange
 ;
 
 propertyExists
