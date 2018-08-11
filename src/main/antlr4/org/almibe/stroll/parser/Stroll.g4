@@ -11,7 +11,7 @@ command
 ;
 
 newCommand
-  : NEW_KEYWORD ENTITY_NAME START_BRACE propertyOrLinkAssignment* END_BRACE
+  : NEW_KEYWORD NAME START_BRACE propertyOrLinkAssignment* END_BRACE
 ;
 
 updateCommand
@@ -27,7 +27,7 @@ deleteCommand
 ;
 
 findCommand
-  : FIND_KEYWORD ENTITY_NAME START_BRACE findParameter* END_BRACE
+  : FIND_KEYWORD NAME START_BRACE findParameter* END_BRACE
 ;
 
 propertyOrLinkAssignment

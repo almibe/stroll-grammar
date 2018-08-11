@@ -13,15 +13,11 @@ NEW_KEYWORD
 ;
 
 STRING
-  : '"' [a-zA-Z0-9 ]+ '"'
+  : '"' ('a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ')+ '"'
 ;
 
 NAME
-  : [a-zA-Z0-9]+
-;
-
-ENTITY_NAME
-  : NAME
+  : ('a' .. 'z' | 'A' .. 'Z' | '0' .. '9')+
 ;
 
 START_BRACKET
@@ -41,7 +37,7 @@ END_BRACE
 ;
 
 INT
-  : [0-9]+
+  : ('0' .. '9')+
 ;
 
 LONG
