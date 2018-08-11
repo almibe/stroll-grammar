@@ -7,7 +7,7 @@ options { tokenVocab = ModalStrollLexer; }
 //;
 
 command
-  : newCommand | updateCommand | setCommand | deleteCommand | findCommand | simpleCommand
+  : (newCommand | updateCommand | setCommand | deleteCommand | findCommand | simpleCommand)? EOF
 ;
 
 newCommand
