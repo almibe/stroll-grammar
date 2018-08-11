@@ -12,8 +12,16 @@ NEW_KEYWORD
   : 'new'
 ;
 
+STRING
+  : '"' [a-zA-Z0-9 ]+ '"'
+;
+
+NAME
+  : [a-zA-Z0-9]+
+;
+
 ENTITY_NAME
-  : 
+  : NAME
 ;
 
 START_BRACKET
@@ -33,7 +41,7 @@ END_BRACE
 ;
 
 INT
-  : [0..9]+
+  : [0-9]+
 ;
 
 LONG
@@ -53,7 +61,7 @@ UPDATE_KEYWORD
 ;
 
 IDENTITY
-  : 
+  : INT+ '-' INT+
 ;
 
 SET_KEYWORD
@@ -70,10 +78,6 @@ COMMA
 
 FIND_KEYWORD
   : 'find'
-;
-
-NAME
-  :
 ;
 
 COLON
@@ -96,10 +100,10 @@ STARTS_WITH
   : 'startsWith'
 ;
 
-STRING
-  :
-;
-
 TO
   : 'to'
+;
+
+WS
+  : (' ' | '\t' | '\n' | '\r')+ -> skip
 ;
