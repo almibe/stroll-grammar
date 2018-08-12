@@ -27,7 +27,7 @@ deleteCommand
 ;
 
 findCommand
-  : FIND_KEYWORD NAME START_BRACE findParameter* END_BRACE
+  : FIND_KEYWORD NAME START_BRACE findParameters? END_BRACE
 ;
 
 propertyOrLinkAssignments
@@ -52,6 +52,10 @@ linkAssignment
 
 linksListAssigment
   : NAME FAT_ARROW START_BRACKET IDENTITY (',' IDENTITY)* END_BRACKET
+;
+
+findParameters
+  : findParameter (',' findParameter)*
 ;
 
 findParameter
