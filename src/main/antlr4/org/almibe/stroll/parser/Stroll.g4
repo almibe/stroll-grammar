@@ -2,9 +2,9 @@ parser grammar Stroll;
 
 options { tokenVocab = ModalStrollLexer; }
 
-//expression
-//  : (VARIABLE EQUAL_SIGN)? command
-//;
+expression
+  : (VARIABLE EQUAL_SIGN)? command
+;
 
 command
   : (newCommand | updateCommand | setCommand | deleteCommand | findCommand | simpleCommand)? EOF
@@ -79,5 +79,5 @@ propertyRange
 ;
 
 simpleCommand
-  : NAME
+  : NAME (START_BRACE propertyOrLinkAssignments? END_BRACE)?
 ;
