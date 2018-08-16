@@ -15,7 +15,7 @@ methodCall
 ;
 
 expression
-  : NAME expressionArguements (DOT DOT expression)*
+  : NAME expressionArguements (DOT DOT expression)?
 ;
 
 expressionArguements
