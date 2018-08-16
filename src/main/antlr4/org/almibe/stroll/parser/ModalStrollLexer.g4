@@ -8,9 +8,9 @@ EQUAL_SIGN
  : '='
 ;
 
-NEW_KEYWORD
-  : 'new'
-;
+//NEW_KEYWORD
+//  : 'new'
+//;
 
 INT
   : ('0' .. '9')+
@@ -44,29 +44,29 @@ BOOLEAN
   : 'true' | 'false'
 ;
 
-UPDATE_KEYWORD
-  : 'update'
-;
+//UPDATE_KEYWORD
+//  : 'update'
+//;
 
 IDENTITY
   : INT+ '-' INT+
 ;
 
-SET_KEYWORD
-  : 'set'
-;
-
-DELETE_KEYWORD
-  : 'delete'
-;
+//SET_KEYWORD
+//  : 'set'
+//;
+//
+//DELETE_KEYWORD
+//  : 'delete'
+//;
 
 COMMA
   : ','
 ;
 
-FIND_KEYWORD
-  : 'find'
-;
+//FIND_KEYWORD
+//  : 'find'
+//;
 
 COLON
   : ':'
@@ -84,13 +84,13 @@ UNDERSCORE
   : '_'
 ;
 
-STARTS_WITH
-  : 'startsWith'
-;
-
-TO
-  : 'to'
-;
+//STARTS_WITH
+//  : 'startsWith'
+//;
+//
+//TO
+//  : 'to'
+//;
 
 STRING
   : '"' ('a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ')+ '"'
