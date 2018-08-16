@@ -8,10 +8,6 @@ EQUAL_SIGN
  : '='
 ;
 
-//NEW_KEYWORD
-//  : 'new'
-//;
-
 INT
   : ('0' .. '9')+
 ;
@@ -40,33 +36,25 @@ END_BRACE
   : '}'
 ;
 
+OPEN_PARENTHESIS
+  : '('
+;
+
+CLOSE_PARENTHESIS
+  : ')'
+;
+
 BOOLEAN
   : 'true' | 'false'
 ;
-
-//UPDATE_KEYWORD
-//  : 'update'
-//;
 
 IDENTITY
   : INT+ '-' INT+
 ;
 
-//SET_KEYWORD
-//  : 'set'
-//;
-//
-//DELETE_KEYWORD
-//  : 'delete'
-//;
-
 COMMA
   : ','
 ;
-
-//FIND_KEYWORD
-//  : 'find'
-//;
 
 COLON
   : ':'
@@ -83,14 +71,6 @@ FAT_ARROW
 UNDERSCORE
   : '_'
 ;
-
-//STARTS_WITH
-//  : 'startsWith'
-//;
-//
-//TO
-//  : 'to'
-//;
 
 STRING
   : '"' ('a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ')+ '"'
