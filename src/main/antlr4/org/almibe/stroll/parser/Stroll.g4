@@ -19,7 +19,7 @@ expression
 ;
 
 expressionArguements
-  : START_BRACE (entityPattern | NAME | propertyValue | IDENTITY )* END_BRACE
+  : START_BRACE (entityPattern | NAME | propertyValue | IDENTITY | expression)* END_BRACE
 ;
 
 entityPattern
