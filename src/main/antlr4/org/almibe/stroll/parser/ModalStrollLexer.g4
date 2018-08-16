@@ -52,6 +52,10 @@ IDENTITY
   : INT+ '-' INT+
 ;
 
+DOT
+  : '.'
+;
+
 COMMA
   : ','
 ;

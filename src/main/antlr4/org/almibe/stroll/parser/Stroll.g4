@@ -11,7 +11,7 @@ assignedExpression
 ;
 
 expression
-  : NAME expressionArguements
+  : (VARIABLE DOT)? NAME expressionArguements
 ;
 
 expressionArguements
