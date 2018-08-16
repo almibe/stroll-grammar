@@ -19,7 +19,7 @@ expression
 ;
 
 expressionArguements
-  : START_BRACE (( VARIABLE+ COLON )? entityPattern | NAME | propertyValue | IDENTITY | expression)* END_BRACE
+  : START_BRACE (( VARIABLE+ COLON )? VARIABLE | entityPattern | NAME | propertyValue | IDENTITY | expression)* END_BRACE
 ;
 
 entityPattern
