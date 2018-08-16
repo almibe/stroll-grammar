@@ -35,11 +35,11 @@ propertyAssignment
 ;
 
 propertyValue
-  : STRING | INT | LONG | DOUBLE | BOOLEAN
+  : STRING | INT | LONG | DOUBLE | BOOLEAN | UNDERSCORE
 ;
 
 linkAssignment
-  : NAME (ARROW | FAT_ARROW) IDENTITY
+  : NAME (ARROW | FAT_ARROW) (IDENTITY | UNDERSCORE )
 ;
 
 linksListAssigment
