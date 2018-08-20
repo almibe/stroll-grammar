@@ -3,11 +3,11 @@ parser grammar Stroll;
 options { tokenVocab = ModalStrollLexer; }
 
 script
-  : (assignedExpression | methodCall | expression)*
+  : (assignedExpression | methodCall)*
 ;
 
 assignedExpression
-  : (VARIABLE EQUAL_SIGN)? (methodCall | expression)
+  : (VARIABLE EQUAL_SIGN)? (methodCall)
 ;
 
 methodCall
@@ -19,7 +19,7 @@ expression
 ;
 
 expressionArguements
-  : START_BRACE (( VARIABLE+ COLON )? VARIABLE | entityPattern | NAME | propertyValue | IDENTITY | expression)* END_BRACE
+  : START_BRACE ( VARIABLE | entityPattern | NAME | propertyValue | IDENTITY | methodCall)* END_BRACE
 ;
 
 entityPattern
