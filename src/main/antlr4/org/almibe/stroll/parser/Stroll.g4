@@ -15,29 +15,15 @@ methodCall
 ;
 
 expressionArguements
-  : START_BRACE ( VARIABLE | entityPattern | NAME | propertyValue | IDENTITY | methodCall)* END_BRACE
+  : START_BRACE
+    ( VARIABLE | argumentPuncutation | NAME | propertyValue | IDENTITY | methodCall )*
+    END_BRACE
 ;
 
-entityPattern
-  : OPEN_PARENTHESIS propertyOrLinkAssignment (COMMA propertyOrLinkAssignment)* CLOSE_PARENTHESIS
-;
-
-propertyOrLinkAssignment
-  : propertyAssignment | linkAssignment | linksListAssigment
-;
-
-propertyAssignment
-  : NAME COLON propertyValue
+argumentPuncutation
+  : COLON | COMMA | START_BRACKET | END_BRACKET | ARROW | FAT_ARROW | UNDERSCORE
 ;
 
 propertyValue
   : STRING | INT | LONG | DOUBLE | BOOLEAN | UNDERSCORE
-;
-
-linkAssignment
-  : NAME (ARROW | FAT_ARROW) (IDENTITY | UNDERSCORE )
-;
-
-linksListAssigment
-  : NAME FAT_ARROW START_BRACKET IDENTITY (',' IDENTITY)* END_BRACKET
 ;
