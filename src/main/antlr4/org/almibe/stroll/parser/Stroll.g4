@@ -3,19 +3,15 @@ parser grammar Stroll;
 options { tokenVocab = ModalStrollLexer; }
 
 script
-  : (assignedExpression | methodCall)*
+  : (assignedExpression)*
 ;
 
 assignedExpression
-  : (VARIABLE EQUAL_SIGN)? (methodCall)
+  : (VARIABLE EQUAL_SIGN)? methodCall
 ;
 
 methodCall
-  : VARIABLE DOT expression
-;
-
-expression
-  : NAME expressionArguements (DOT DOT expression)?
+  : VARIABLE DOT NAME expressionArguements
 ;
 
 expressionArguements
