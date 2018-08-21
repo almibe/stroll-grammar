@@ -15,10 +15,10 @@ methodCall
 ;
 
 methodContents
-  :  ( contentPuncutation | contentValue | methodCall )*
+  : ( contentPunctuation | contentValue | methodCall )*
 ;
 
-contentPuncutation
+contentPunctuation
   : COLON | COMMA | START_BRACKET | END_BRACKET | ARROW | FAT_ARROW
 ;
 
