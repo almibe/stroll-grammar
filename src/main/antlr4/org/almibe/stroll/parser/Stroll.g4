@@ -11,17 +11,17 @@ line
 ;
 
 methodCall
-  : VARIABLE DOT NAME methodArguements
+  : VARIABLE DOT NAME START_BRACE methodContents END_BRACE
 ;
 
-methodArguements
-  : START_BRACE ( argumentPuncutation | argumentValue | methodCall )* END_BRACE
+methodContents
+  :  ( contentPuncutation | contentValue | methodCall )*
 ;
 
-argumentPuncutation
+contentPuncutation
   : COLON | COMMA | START_BRACKET | END_BRACKET | ARROW | FAT_ARROW
 ;
 
-argumentValue
+contentValue
   : STRING | INT | LONG | DOUBLE | BOOLEAN | UNDERSCORE | IDENTITY | NAME | VARIABLE
 ;
