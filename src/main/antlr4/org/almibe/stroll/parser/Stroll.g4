@@ -15,15 +15,13 @@ methodCall
 ;
 
 methodArguements
-  : START_BRACE
-    ( VARIABLE | argumentPuncutation | NAME | propertyValue | IDENTITY | methodCall )*
-    END_BRACE
+  : START_BRACE ( argumentPuncutation | argumentValue | methodCall )* END_BRACE
 ;
 
 argumentPuncutation
-  : COLON | COMMA | START_BRACKET | END_BRACKET | ARROW | FAT_ARROW | UNDERSCORE
+  : COLON | COMMA | START_BRACKET | END_BRACKET | ARROW | FAT_ARROW
 ;
 
-propertyValue
-  : STRING | INT | LONG | DOUBLE | BOOLEAN | UNDERSCORE
+argumentValue
+  : STRING | INT | LONG | DOUBLE | BOOLEAN | UNDERSCORE | IDENTITY | NAME | VARIABLE
 ;
