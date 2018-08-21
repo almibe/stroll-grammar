@@ -11,7 +11,7 @@ line
 ;
 
 methodCall
-  : VARIABLE DOT NAME START_BRACE methodContents END_BRACE
+  : ( VARIABLE | NAME ) DOT NAME START_BRACE methodContents END_BRACE
 ;
 
 methodContents
