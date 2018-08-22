@@ -7,21 +7,21 @@ script
 ;
 
 line
-  : (VARIABLE EQUAL_SIGN)? methodCall
+  : (VARIABLE EQUAL_SIGN)? call
 ;
 
-methodCall
-  : ( VARIABLE | NAME ) DOT NAME START_BRACE methodContents END_BRACE
+call
+  : ( VARIABLE | NAME ) DOT NAME START_BRACE callContents END_BRACE
 ;
 
-methodContents
-  : ( contentPunctuation | contentValue | methodCall )*
+callContents
+  : ( callPunctuation | callValue | call )*
 ;
 
-contentPunctuation
+callPunctuation
   : COLON | COMMA | START_BRACKET | END_BRACKET | ARROW | FAT_ARROW
 ;
 
-contentValue
+callValue
   : STRING | INT | LONG | DOUBLE | BOOLEAN | UNDERSCORE | IDENTITY | NAME | VARIABLE
 ;
