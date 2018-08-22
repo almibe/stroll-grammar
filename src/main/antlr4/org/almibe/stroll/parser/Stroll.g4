@@ -15,13 +15,13 @@ call
 ;
 
 callContents
-  : ( callPunctuation | callValue | call )*
+  : ( callContentPunctuation | callContentValue | call )*
 ;
 
-callPunctuation
+callContentPunctuation
   : COLON | COMMA | START_BRACKET | END_BRACKET | ARROW | FAT_ARROW
 ;
 
-callValue
-  : STRING | INT | LONG | DOUBLE | BOOLEAN | UNDERSCORE | IDENTITY | NAME | VARIABLE
+callContentValue
+  : STRING | INT | LONG | DOUBLE | BOOLEAN | UNDERSCORE | IDENTITY | NAME | VARIABLE | USER_VARIABLE
 ;

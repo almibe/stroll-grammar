@@ -4,6 +4,10 @@ VARIABLE
   : '$' NAME
 ;
 
+USER_VARIABLE
+  : '?' NAME
+;
+
 EQUAL_SIGN
  : '='
 ;
